@@ -1,0 +1,698 @@
+/*
+ * AKSTARTECH AND ENTERTAINMENT PRIVATE LIMITED - Main Stylesheet
+ * Color Scheme: RIL Inspired (Deep Blue, Gold, White)
+ */
+
+:root {
+  --primary-blue: #0056b3; /* Brighter Royal Blue */
+  --secondary-blue: #0084ff; /* Vibrant Electric Blue */
+  --accent-gold: #e0b44b; /* Brighter Gold */
+  --text-dark: #1a1e21;
+  --text-light: #ffffff;
+  --bg-light: #ffffff;
+  --bg-gray: #f8f9fa;
+  --gradient-blue: linear-gradient(135deg, #0056b3 0%, #0084ff 100%);
+  --gradient-gold: linear-gradient(135deg, #e0b44b 0%, #fbd883 100%);
+  --font-main: 'Outfit', sans-serif;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  overflow-x: hidden;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+}
+
+p {
+  line-height: 1.7;
+  color: #333;
+  font-size: 1.05rem;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.text-muted {
+  color: #666 !important;
+}
+
+/* Utilities */
+.text-gold { color: var(--accent-gold) !important; }
+.bg-blue { background-color: var(--primary-blue) !important; }
+.bg-gold { background-color: var(--accent-gold) !important; }
+.bg-gradient-blue { background: var(--gradient-blue); }
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--gradient-gold);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--gradient-blue);
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 75, 141, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 75, 141, 0.4);
+  background: var(--primary-blue);
+  color: white;
+}
+
+.btn-outline-gold {
+  border: 2px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 10px 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.btn-outline-gold:hover {
+  background: var(--accent-gold);
+  color: white;
+}
+
+/* Navbar */
+.navbar {
+  background-color: white;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  padding: 15px 0;
+  transition: all 0.3s ease;
+}
+
+.navbar-brand img {
+  height: 50px; /* Adjust based on logo needs */
+  width: auto;
+}
+
+.nav-link {
+  color: var(--primary-blue) !important;
+  font-weight: 600;
+  padding: 10px 20px !important;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  width: 0;
+  height: 2px;
+  background-color: var(--accent-gold);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+  width: calc(100% - 40px);
+}
+
+.navbar-toggler {
+  border: none;
+  color: var(--primary-blue);
+}
+
+/* Footer */
+footer {
+  background-color: #0b1e33; /* Very dark blue */
+  color: white;
+  padding: 60px 0 20px;
+}
+
+footer h4 {
+  color: white;
+  margin-bottom: 25px;
+}
+
+footer p, footer a {
+  color: #e0e0e0;
+}
+
+footer a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Parallax Effect */
+.parallax-section {
+  background-attachment: fixed !important;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Page Header (New Banner Style) */
+.page-header {
+  background: linear-gradient(rgba(0, 30, 60, 0.85), rgba(0, 30, 60, 0.85)), url('https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 160px 0 100px;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+}
+
+.page-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.page-header .lead {
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  color: #f0f0f0;
+}
+
+/* Talent Cards */
+.talent-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  height: 400px; /* Fixed height for consistency */
+}
+
+.talent-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.talent-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.talent-card:hover .talent-img {
+  transform: scale(1.1);
+}
+
+.talent-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.5) 60%, transparent 100%);
+  padding: 30px 20px;
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.talent-card:hover .talent-info {
+  transform: translateY(0);
+}
+
+.talent-info h5 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: var(--accent-gold);
+}
+
+.talent-info p {
+  color: #ddd;
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/* Brand Grid / Marquee */
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  height: 100px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  min-width: 200px; /* Ensure fixed width for smooth scroll */
+  margin: 0 15px; /* Spacing between items in marquee */
+}
+
+.brand-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.brand-item img {
+  max-height: 80px;
+  max-width: 100%;
+  width: auto;
+  object-fit: contain;
+  filter: none; /* Show full color */
+  transition: all 0.4s ease;
+}
+
+/* Marquee Animation */
+.marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 40s linear infinite; /* Adjusted speed for readability */
+}
+
+.marquee-track:hover {
+  animation-play-state: paused; /* Pause on hover */
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* Scrolls half the track width (the original set) */
+}
+
+/* =========================================
+   Masonry Grid for Videos
+   ========================================= */
+.masonry-grid {
+    column-count: 1;
+    column-gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .masonry-grid {
+        column-count: 3;
+    }
+}
+
+.masonry-item {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+
+/* =========================================
+   Carousel Controls (Modern)
+   ========================================= */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-blue);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: var(--accent-gold);
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+@media (max-width: 992px) {
+    .carousel-control-prev { left: 0; }
+    .carousel-control-next { right: 0; }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-size: 100%, 100%;
+}
+
+/* =========================================
+   Home Hero Section Revamp
+   ========================================= */
+.hero-section-home {
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Dark Gradient Overlay for Readability */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.85) 0%, rgba(11, 30, 51, 0.7) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 15px;
+}
+
+/* Typography Enhancements */
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    /* Gradient Text Animation */
+    background: linear-gradient(to right, #ffffff, #ffd700, #ffffff); /* White -> Gold -> White */
+    background-size: 200% auto;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s linear infinite;
+    text-shadow: none; /* Text shadow doesn't work well with gradient text clip usually, or needs simplified shadow */
+    filter: drop-shadow(0 4px 15px rgba(0,0,0,0.5)); /* Use filter for shadow on clipped text */
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
+}
+
+.hero-subtitle {
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: #e0e0e0; /* Off-white for subtitle */
+    margin-bottom: 40px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+}
+
+/* Button Upgrades */
+.btn-glow {
+    box-shadow: 0 0 20px rgba(0, 86, 179, 0.6);
+    transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 86, 179, 0.9);
+    transform: translateY(-3px);
+}
+
+.btn-glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 12px 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: white;
+    color: white;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* =========================================
+   Modern Portfolio Redesign
+   ========================================= */
+
+/* Filter Nav (Modern Pills) */
+.nav-pills-modern {
+  gap: 15px;
+}
+
+.nav-pills-modern .nav-link {
+  background: white;
+  color: var(--primary-blue);
+  border: 1px solid #eee;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-pills-modern .nav-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-color: var(--accent-gold);
+}
+
+.nav-pills-modern .nav-link.active {
+  background: var(--gradient-blue);
+  color: white !important;
+  border-color: transparent;
+  box-shadow: 0 8px 25px rgba(0, 86, 179, 0.4);
+  transform: translateY(-2px);
+}
+
+.nav-pills-modern .nav-link::after {
+  display: none; /* Remove default underline from nav-link */
+}
+
+/* Portfolio Cards Modern */
+.portfolio-card-modern {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  background: #fff;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  aspect-ratio: 4/3; /* Consistent aspect ratio */
+}
+
+.portfolio-card-modern:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.portfolio-card-modern img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.portfolio-card-modern:hover img {
+  transform: scale(1.15);
+}
+
+.portfolio-overlay-modern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 30, 60, 0.9) 0%, rgba(0, 86, 179, 0.8) 40%, rgba(0, 86, 179, 0.4) 100%);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.4s ease;
+  backdrop-filter: blur(2px);
+  padding: 20px;
+}
+
+.portfolio-card-modern:hover .portfolio-overlay-modern {
+  opacity: 1;
+}
+
+.portfolio-overlay-modern h5 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  transform: translateY(20px);
+  transition: transform 0.4s 0.1s ease, opacity 0.4s 0.1s ease;
+  opacity: 0;
+}
+
+.portfolio-overlay-modern p {
+  color: var(--accent-gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(20px);
+  transition: transform 0.4s 0.2s ease, opacity 0.4s 0.2s ease;
+  opacity: 0;
+}
+
+.portfolio-card-modern:hover .portfolio-overlay-modern h5,
+.portfolio-card-modern:hover .portfolio-overlay-modern p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.btn-icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  color: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-top: 15px;
+  transform: scale(0);
+  transition: transform 0.4s 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.portfolio-card-modern:hover .btn-icon-circle {
+  transform: scale(1);
+}
+
+.btn-icon-circle:hover {
+  background: var(--accent-gold);
+  color: white;
+}
+
+/* Modern Video Card */
+.video-card-modern {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  background: #000;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.video-card-modern:hover {
+  transform: scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.video-card-modern video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 3px solid var(--accent-gold);
+}
+
+.video-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to top, black 0%, transparent 100%);
+  padding: 20px;
+  pointer-events: none; /* Let clicks pass through to video controls if needed, but standard controls usually handle this */
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+  .portfolio-card-modern {
+    aspect-ratio: 16/9;
+  }
+}
+
+.form-status {
+  margin-top: 1rem;
+}
+
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
