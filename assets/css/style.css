@@ -1105,3 +1105,442 @@ footer a:hover {
     padding: 24px;
   }
 }
+
+
+/* =========================================
+   Responsive Polish: Tablet & Mobile
+   ========================================= */
+@media (max-width: 991px) {
+  body {
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.65;
+  }
+
+  .section-padding {
+    padding: 64px 0;
+  }
+
+  .section-title {
+    margin-bottom: 34px;
+  }
+
+  .section-title h2,
+  .section-title-modern h2 {
+    font-size: clamp(1.9rem, 4.8vw, 2.5rem);
+  }
+
+  .page-header {
+    padding: 130px 0 78px;
+    background-attachment: scroll;
+  }
+
+  .page-header h1 {
+    font-size: clamp(2.4rem, 6vw, 3.2rem);
+    letter-spacing: 0.06em;
+  }
+
+  .page-header .lead {
+    font-size: 1.1rem;
+  }
+
+  .navbar {
+    padding: 12px 0;
+  }
+
+  .navbar-brand img {
+    height: 42px;
+  }
+
+  .nav-link {
+    padding: 10px 12px !important;
+  }
+
+  .hero-section-home {
+    padding: 120px 0 68px;
+    min-height: auto;
+  }
+
+  .hero-layout {
+    min-height: auto;
+    gap: 28px !important;
+  }
+
+  .hero-copy {
+    max-width: 100%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .hero-subtitle {
+    max-width: 100%;
+  }
+
+  .hero-actions,
+  .hero-trust-row {
+    justify-content: center;
+  }
+
+  .hero-stage {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .hero-stage-card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .hero-stage-card-primary h3 {
+    font-size: 1.7rem;
+  }
+
+  .hero-stage-metric,
+  .hero-trust-item {
+    min-width: 150px;
+  }
+
+  .talent-card {
+    height: 340px;
+  }
+
+  .brand-item {
+    min-width: 160px;
+    height: 92px;
+    margin: 0 10px;
+  }
+
+  .brand-item img {
+    max-height: 64px;
+  }
+
+  .brand-showcase-card {
+    padding: 14px;
+    border-radius: 20px;
+  }
+
+  .brand-showcase-card .brand-item {
+    height: 112px;
+  }
+
+  .team-card-image {
+    height: 300px;
+  }
+
+  .team-card-content {
+    padding: 20px;
+  }
+
+  .testimonial-card-modern {
+    padding: 24px;
+  }
+
+  .testimonial-copy {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 42px;
+    height: 42px;
+  }
+
+  footer {
+    padding: 52px 0 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+  }
+
+  .section-padding {
+    padding: 48px 0;
+  }
+
+  .section-title {
+    margin-bottom: 26px;
+  }
+
+  .section-title h2,
+  .section-title-modern h2 {
+    font-size: 1.7rem;
+    letter-spacing: 0.01em;
+  }
+
+  .section-kicker {
+    font-size: 0.72rem;
+    letter-spacing: 0.09em;
+    padding: 7px 12px;
+    margin-bottom: 12px;
+  }
+
+  .page-header {
+    padding: 108px 0 58px;
+  }
+
+  .page-header h1 {
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+  }
+
+  .page-header .lead {
+    font-size: 1rem;
+  }
+
+  .hero-section-home {
+    padding: 108px 0 54px;
+  }
+
+  .hero-kicker {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    padding: 8px 12px;
+  }
+
+  .hero-brand {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 11vw, 3.4rem);
+    line-height: 1.02;
+    margin-bottom: 16px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+
+  .hero-actions .btn,
+  .btn-lg {
+    width: 100%;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+
+  .hero-trust-row {
+    gap: 10px;
+  }
+
+  .hero-trust-item,
+  .hero-stage-metric {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+  }
+
+  .hero-stage-card {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .hero-stage-card-primary h3 {
+    font-size: 1.4rem;
+  }
+
+  .hero-stage-card-secondary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero-stage-card-secondary strong {
+    font-size: 1.8rem;
+  }
+
+  .hero-stage-foot {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .talent-card {
+    height: 250px;
+    border-radius: 18px;
+  }
+
+  .talent-info {
+    padding: 18px 16px;
+    transform: translateY(0);
+  }
+
+  .talent-info h5 {
+    font-size: 1.15rem;
+  }
+
+  .talent-info p {
+    font-size: 0.92rem;
+  }
+
+  .brand-showcase-card {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .brand-showcase-card .brand-item {
+    height: 92px;
+  }
+
+  .brand-item {
+    padding: 12px;
+    height: 82px;
+  }
+
+  .brand-item img {
+    max-height: 52px;
+  }
+
+  .nav-pills-modern {
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .nav-pills-modern .nav-link {
+    width: 100%;
+    text-align: center;
+    padding: 12px 18px;
+    font-size: 0.92rem;
+  }
+
+  .team-card-image {
+    height: 250px;
+  }
+
+  .team-card-content {
+    padding: 18px;
+  }
+
+  .team-card-badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    padding: 7px 12px;
+  }
+
+  .testimonial-card-modern {
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .testimonial-copy {
+    font-size: 0.96rem;
+    margin-bottom: 18px;
+  }
+
+  .testimonial-quote-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .masonry-grid {
+    column-gap: 1rem;
+  }
+
+  .masonry-item {
+    margin-bottom: 1rem;
+  }
+
+  .video-info {
+    padding: 14px;
+  }
+
+  .video-info h5 {
+    font-size: 1rem;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 38px;
+    height: 38px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .card-body.p-5,
+  .card-body.p-4 {
+    padding: 1.2rem !important;
+  }
+
+  footer {
+    padding: 44px 0 16px;
+  }
+
+  footer h4,
+  footer h5 {
+    margin-bottom: 14px;
+  }
+
+  .footer-bottom {
+    margin-top: 24px;
+    padding-top: 16px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .section-padding {
+    padding: 40px 0;
+  }
+
+  .hero-section-home {
+    padding: 102px 0 48px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.96rem;
+  }
+
+  .brand-showcase-grid .col-6 {
+    width: 50%;
+  }
+
+  .brand-showcase-card .brand-item {
+    height: 84px;
+  }
+
+  .brand-item img {
+    max-height: 46px;
+  }
+
+  .team-card-image {
+    height: 220px;
+  }
+
+  .page-header h1 {
+    font-size: 1.8rem;
+  }
+}
