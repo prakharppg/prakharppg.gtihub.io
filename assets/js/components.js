@@ -46,7 +46,7 @@
               <p>India's premier influencer marketing and talent management agency. Elevating brands through the power of stars.</p>
               <div class="social-links mt-3">
                 <template x-for="social in socialLinks" :key="social.label">
-                  <a :href="social.href" class="text-white me-3 fs-5" :aria-label="social.label"><i :class="social.icon"></i></a>
+                  <a :href="social.href" class="text-white me-3 fs-5" :aria-label="social.label" target="_blank" rel="noopener noreferrer"><i :class="social.icon"></i></a>
                 </template>
               </div>
             </div>
@@ -91,6 +91,21 @@
       </footer>`;
   }
 
+  function brandGridTemplate() {
+    return `
+      <div class="row g-4 justify-content-center brand-showcase-grid" x-data="siteComponents.brandGrid()">
+        <template x-for="brand in brands" :key="brand.name">
+          <div class="col-6 col-md-4 col-lg-3">
+            <div class="brand-showcase-card h-100">
+              <div class="brand-item w-100 m-0 border-0 shadow-none">
+                <img loading="lazy" decoding="async" :src="brand.image" :alt="brand.name">
+              </div>
+            </div>
+          </div>
+        </template>
+      </div>`;
+  }
+
   function brandMarqueeTemplate(source) {
     return `
       <div class="marquee-wrapper" x-data="siteComponents.brandMarquee('${source}')">
@@ -101,6 +116,39 @@
             </div>
           </template>
         </div>
+      </div>`;
+  }
+
+  function starPowerCarouselTemplate() {
+    return `
+      <div id="starPowerCarousel" class="carousel slide" data-bs-ride="carousel" x-data="siteComponents.starPower()">
+        <div class="carousel-inner">
+          <template x-for="(slide, slideIndex) in slides" :key="'slide-' + slideIndex">
+            <div class="carousel-item" :class="{ active: slideIndex === 0 }">
+              <div class="row justify-content-center">
+                <template x-for="person in slide" :key="person.name">
+                  <div class="col-md-4 mb-4">
+                    <div class="talent-card">
+                      <img loading="lazy" decoding="async" :src="person.image" class="talent-img" :alt="person.name">
+                      <div class="talent-info">
+                        <h5 x-text="person.name"></h5>
+                        <p x-text="person.role"></p>
+                      </div>
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </template>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#starPowerCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon rounded-circle bg-blue p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#starPowerCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon rounded-circle bg-blue p-3" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>`;
   }
 
@@ -144,7 +192,7 @@
   function portfolioVideosTemplate() {
     return `
       <div class="masonry-grid" x-data="siteComponents.portfolioVideos()">
-        <template x-for="(item, index) in items" :key="item.src">
+        <template x-for="item in items" :key="item.src">
           <div class="masonry-item" data-aos="fade-up" :data-aos-delay="item.delay || 0">
             <div class="video-card-modern">
               <video controls preload="none" playsinline class="w-100" loading="lazy">
@@ -244,9 +292,47 @@
         <div class="mt-5">
           <h5 class="fw-bold mb-3">Follow Us</h5>
           <template x-for="social in socialLinks" :key="social.label">
-            <a :href="social.href" class="btn btn-outline-primary btn-sm me-2 rounded-circle" :aria-label="social.label"><i :class="social.icon"></i></a>
+            <a :href="social.href" class="btn btn-outline-primary btn-sm me-2 rounded-circle" :aria-label="social.label" target="_blank" rel="noopener noreferrer"><i :class="social.icon"></i></a>
           </template>
         </div>
+      </div>`;
+  }
+
+  function teamGridTemplate() {
+    return `
+      <div class="row g-4" x-data="siteComponents.teamMembers()">
+        <template x-for="member in items" :key="member.name">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <article class="team-card-modern h-100">
+              <div class="team-card-image-wrap">
+                <img loading="lazy" decoding="async" :src="member.image" class="team-card-image" :alt="member.name">
+              </div>
+              <div class="team-card-content">
+                <span class="team-card-badge" x-text="member.role"></span>
+                <h5 class="mb-2" x-text="member.name"></h5>
+                <p class="mb-0 text-muted">Meet the people leading brand strategy, creative execution, and production delivery.</p>
+              </div>
+            </article>
+          </div>
+        </template>
+      </div>`;
+  }
+
+  function testimonialsTemplate() {
+    return `
+      <div class="row g-4" x-data="siteComponents.testimonials()">
+        <template x-for="item in items" :key="item.company">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <article class="testimonial-card-modern h-100">
+              <div class="testimonial-quote-icon"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-copy">&ldquo;<span x-text="item.quote"></span>&rdquo;</p>
+              <div class="testimonial-meta mt-auto">
+                <h5 class="fw-bold mb-1" x-text="item.designation"></h5>
+                <span class="testimonial-company" x-text="item.company"></span>
+              </div>
+            </article>
+          </div>
+        </template>
       </div>`;
   }
 
@@ -271,60 +357,63 @@
         year: new Date().getFullYear()
       };
     },
-    brandMarquee(source) {
+    brandGrid() {
+      return { brands: data.brands || [] };
+    },
+    brandMarquee() {
       const brands = data.brands || [];
-      const homeSubset = brands.filter((brand) => [
-        'Partner Brand 1', 'Partner Brand 2', 'Cipla', 'Liberty', 'Kirtilals', 'My Muse', 'Kapila Pasu', 'Daikcell'
-      ].includes(brand.name));
-      const selected = source === 'home' ? homeSubset : brands;
-      return {
-        source,
-        duplicatedBrands: [...selected, ...selected]
-      };
+      return { duplicatedBrands: [...brands, ...brands] };
+    },
+    starPower() {
+      const people = data.starPower || [];
+      const slides = [];
+      for (let i = 0; i < people.length; i += 3) {
+        slides.push(people.slice(i, i + 3));
+      }
+      return { slides };
     },
     faq() {
-      return {
-        faqItems: data.faqItems || []
-      };
+      return { faqItems: data.faqItems || [] };
     },
     portfolioFeatured() {
-      return {
-        items: data.portfolioFeatured || []
-      };
+      return { items: data.portfolioFeatured || [] };
     },
     portfolioVideos() {
-      return {
-        items: data.portfolioVideos || []
-      };
+      return { items: data.portfolioVideos || [] };
     },
     servicesMedia() {
-      return {
-        items: data.servicesMediaCards || []
-      };
+      return { items: data.servicesMediaCards || [] };
     },
     aboutTimeline() {
-      return {
-        items: data.aboutTimeline || []
-      };
+      return { items: data.aboutTimeline || [] };
     },
     contactInfo() {
       return {
         items: data.contactInfoItems || [],
         socialLinks: data.contactSocialLinks || []
       };
+    },
+    teamMembers() {
+      return { items: data.teamMembers || [] };
+    },
+    testimonials() {
+      return { items: data.testimonials || [] };
     }
   };
 
   window.renderSiteComponents = function renderSiteComponents() {
     initMount(document.getElementById('site-navbar'), navTemplate());
     initMount(document.getElementById('site-footer'), footerTemplate());
-    initMount(document.getElementById('home-brand-marquee'), brandMarqueeTemplate('home'));
+    initMount(document.getElementById('home-brand-marquee'), brandGridTemplate());
     initMount(document.getElementById('portfolio-brand-marquee'), brandMarqueeTemplate('portfolio'));
+    initMount(document.getElementById('star-power-carousel'), starPowerCarouselTemplate());
     initMount(document.getElementById('faq-accordion'), faqTemplate());
     initMount(document.getElementById('portfolio-featured-grid'), portfolioFeaturedTemplate());
     initMount(document.getElementById('portfolio-video-grid'), portfolioVideosTemplate());
     initMount(document.getElementById('services-media-grid'), servicesMediaTemplate());
     initMount(document.getElementById('about-timeline'), aboutTimelineTemplate());
     initMount(document.getElementById('contact-info-details'), contactInfoTemplate());
+    initMount(document.getElementById('team-grid'), teamGridTemplate());
+    initMount(document.getElementById('testimonials-carousel'), testimonialsTemplate());
   };
 })();

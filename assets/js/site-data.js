@@ -2,11 +2,11 @@ window.siteData = {
   company: {
     shortName: 'AKSTARTECH',
     legalName: 'AKSTARTECH AND ENTERTAINMENT PRIVATE LIMITED',
-    email: 'contact@akstarentertainment.com',
-    phone: '+91 98765 43210',
-    location: 'Mumbai, India',
+    email: 'marketing@akstartechandentertainment.com',
+    phone: '+91 9140178355',
+    location: 'Lucknow, Uttar Pradesh, India',
     logo: 'assets/images/logos/company-logo-256.png',
-    directors: ['Sumit Gupta', 'Prakhar Pratap Gupta']
+    directors: ['Prakhar Pratap Gupta', 'Sumit Gupta']
   },
   navLinks: [
     { label: 'Home', href: 'index.html', page: 'home' },
@@ -28,30 +28,42 @@ window.siteData = {
     { label: 'SPICE Approval Letter', href: 'assets/docs/legal/spice-part-b-approval-letter-ac2222113.pdf' }
   ],
   socialLinks: [
-    { label: 'Instagram', href: '#', icon: 'fab fa-instagram' },
-    { label: 'Facebook', href: '#', icon: 'fab fa-facebook-f' },
+    { label: 'Instagram', href: 'https://www.instagram.com/akstartechandentertainment', icon: 'fab fa-instagram' },
+    { label: 'Facebook', href: 'https://www.facebook.com/share/1BeexXFjzZ/', icon: 'fab fa-facebook-f' },
     { label: 'LinkedIn', href: '#', icon: 'fab fa-linkedin-in' },
     { label: 'YouTube', href: '#', icon: 'fab fa-youtube' }
   ],
   contactSocialLinks: [
-    { label: 'Instagram', href: '#', icon: 'fab fa-instagram' },
-    { label: 'Facebook', href: '#', icon: 'fab fa-facebook-f' },
+    { label: 'Instagram', href: 'https://www.instagram.com/akstartechandentertainment', icon: 'fab fa-instagram' },
+    { label: 'Facebook', href: 'https://www.facebook.com/share/1BeexXFjzZ/', icon: 'fab fa-facebook-f' },
     { label: 'Twitter', href: '#', icon: 'fab fa-twitter' },
     { label: 'LinkedIn', href: '#', icon: 'fab fa-linkedin-in' }
   ],
   brands: [
     { name: 'Partner Brand 1', image: 'assets/images/brands/top-1.jpeg' },
     { name: 'Partner Brand 2', image: 'assets/images/brands/top-2.jpeg' },
-    { name: 'Aristocrate', image: 'assets/images/brands/aristocrate.png' },
-    { name: 'Bio Valley', image: 'assets/images/brands/bio-valley.png' },
+    { name: 'Aristocrat Rainwear', image: 'assets/images/brands/aristocrate.png' },
+    { name: 'Bio Valley', image: 'assets/images/brands/bio-valley.jpg' },
     { name: 'Cipla', image: 'assets/images/brands/cipla.png' },
     { name: 'Daikcell', image: 'assets/images/brands/daikcell.png' },
-    { name: 'Indira Fuel', image: 'assets/images/brands/indira-fuel.png' },
+    { name: 'Frizty', image: 'assets/images/brands/frizty.jpg' },
+    { name: 'Indira Fuel Tank', image: 'assets/images/brands/indira-fuel.png' },
     { name: 'Kapila Pasu', image: 'assets/images/brands/kapila-pasu.png' },
     { name: 'Kirtilals', image: 'assets/images/brands/kirtilals.png' },
     { name: 'Liberty', image: 'assets/images/brands/liberty.png' },
     { name: 'My Muse', image: 'assets/images/brands/my-muse.png' },
     { name: 'Vluuv Skin', image: 'assets/images/brands/vluuv-skin.png' }
+  ],
+  starPower: [
+    { name: 'Malaika Arora', role: 'Actor & TV Personality', image: 'assets/images/star-power/malaika-arora.jpg' },
+    { name: 'Avneet Kaur', role: 'Actor & Influencer', image: 'assets/images/star-power/avneet-kaur.jpeg' },
+    { name: 'Hina Khan', role: 'Actor', image: 'assets/images/star-power/hina-khan.jpeg' },
+    { name: 'Kajol', role: 'Actor', image: 'assets/images/star-power/kajol.jpeg' },
+    { name: 'Sunny Deol', role: 'Actor', image: 'assets/images/star-power/sunny-deol.jpeg' },
+    { name: 'Badshah', role: 'Rapper & Music Producer', image: 'assets/images/star-power/badshah.jpeg' },
+    { name: 'Salman Khan', role: 'Actor', image: 'assets/images/star-power/salman-khan.jpeg' },
+    { name: 'Katrina Kaif', role: 'Actor', image: 'assets/images/star-power/katrina-kaif.jpeg' },
+    { name: 'Akshay Kumar', role: 'Actor', image: 'assets/images/star-power/akshay-kumar.jpeg' }
   ],
   faqItems: [
     {
@@ -155,7 +167,7 @@ window.siteData = {
     {
       year: '2020',
       title: 'The Beginning',
-      description: 'Started up as an Events Expert. Pivoted due to market changes and established ourselves as a comprehensive Marketing Agency.',
+      description: 'Started up as an Events Expert. Pivoted due to market changes and established ourselves as a comprehensive marketing agency.',
       align: 'left',
       accent: 'gold',
       lineHeight: '100%'
@@ -163,7 +175,7 @@ window.siteData = {
     {
       year: '2021',
       title: 'The Expansion',
-      description: 'Championed in Influencer Marketing as AKSTARTECH AND ENTERTAINMENT PRIVATE LIMITED. Created a strong foothold in the digital space.',
+      description: 'Championed in influencer marketing as AKSTARTECH AND ENTERTAINMENT PRIVATE LIMITED and created a strong foothold in the digital space.',
       align: 'right',
       accent: 'blue',
       lineHeight: '100%'
@@ -186,9 +198,43 @@ window.siteData = {
     }
   ],
   contactInfoItems: [
-    { title: 'Head Office', value: 'Mumbai, Maharashtra, India', icon: 'fas fa-map-marker-alt' },
-    { title: 'Phone', value: '+91 98765 43210', icon: 'fas fa-phone' },
-    { title: 'Email', value: 'contact@akstarentertainment.com', icon: 'fas fa-envelope' },
-    { title: 'Directors', values: ['Sumit Gupta', 'Prakhar Pratap Gupta'], icon: 'fas fa-user-tie' }
+    { title: 'Head Office', value: 'Lucknow, Uttar Pradesh, India', icon: 'fas fa-map-marker-alt' },
+    { title: 'Phone', value: '+91 9140178355', icon: 'fas fa-phone' },
+    { title: 'Email', value: 'marketing@akstartechandentertainment.com', icon: 'fas fa-envelope' },
+    { title: 'Directors', values: ['Prakhar Pratap Gupta', 'Sumit Gupta'], icon: 'fas fa-user-tie' }
+  ],
+  teamMembers: [
+    {
+      name: 'Prakhar Pratap Gupta',
+      role: 'Director',
+      image: 'assets/images/prakhar-gupta.jpeg'
+    },
+    {
+      name: 'Sumit Gupta',
+      role: 'Director',
+      image: 'assets/images/sumit-gupta.jpeg'
+    },
+    {
+      name: 'Creative & Production Team',
+      role: 'Core Team',
+      image: 'assets/images/core-teams.png'
+    }
+  ],
+  testimonials: [
+    {
+      quote: 'Great experience working with Ak Star Tech & Entertainment Pvt. Ltd. Professional team, high-quality video editing, and timely delivery.',
+      designation: 'CEO',
+      company: 'Daikcell'
+    },
+    {
+      quote: 'Highly satisfied with their services and creative work. They deliver excellent results and are very reliable.',
+      designation: 'CEO',
+      company: 'Kirtilals'
+    },
+    {
+      quote: 'Ak Star Tech & Entertainment provided outstanding service and support. Their team is skilled, responsive, and delivers top-quality output.',
+      designation: 'CEO',
+      company: 'Bio Valley'
+    }
   ]
 };
