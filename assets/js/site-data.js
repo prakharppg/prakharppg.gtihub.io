@@ -29,13 +29,13 @@ window.siteData = {
   ],
   socialLinks: [
     { label: 'Instagram', href: 'https://www.instagram.com/akstartechandentertainment', icon: 'fab fa-instagram' },
-    { label: 'Facebook', href: 'https://www.facebook.com/share/1BeexXFjzZ/', icon: 'fab fa-facebook-f' },
+    { label: 'Facebook', href: 'https://www.facebook.com/akstartechandentertainment', icon: 'fab fa-facebook-f' },
     { label: 'LinkedIn', href: '#', icon: 'fab fa-linkedin-in' },
     { label: 'YouTube', href: '#', icon: 'fab fa-youtube' }
   ],
   contactSocialLinks: [
     { label: 'Instagram', href: 'https://www.instagram.com/akstartechandentertainment', icon: 'fab fa-instagram' },
-    { label: 'Facebook', href: 'https://www.facebook.com/share/1BeexXFjzZ/', icon: 'fab fa-facebook-f' },
+    { label: 'Facebook', href: 'https://www.facebook.com/akstartechandentertainment', icon: 'fab fa-facebook-f' },
     { label: 'Twitter', href: '#', icon: 'fab fa-twitter' },
     { label: 'LinkedIn', href: '#', icon: 'fab fa-linkedin-in' }
   ],

@@ -110,7 +110,7 @@
     return `
       <div class="marquee-wrapper" x-data="siteComponents.brandMarquee('${source}')">
         <div class="marquee-track">
-          <template x-for="(brand, index) in duplicatedBrands" :key="source + '-' + index">
+          <template x-for="(brand, index) in duplicatedBrands" :key="brand.name + '-' + index">
             <div class="brand-item">
               <img loading="lazy" decoding="async" :src="brand.image" :alt="brand.name">
             </div>
@@ -405,7 +405,7 @@
     initMount(document.getElementById('site-navbar'), navTemplate());
     initMount(document.getElementById('site-footer'), footerTemplate());
     initMount(document.getElementById('home-brand-marquee'), brandGridTemplate());
-    initMount(document.getElementById('portfolio-brand-marquee'), brandMarqueeTemplate('portfolio'));
+    initMount(document.getElementById('portfolio-brand-marquee'), brandGridTemplate());
     initMount(document.getElementById('star-power-carousel'), starPowerCarouselTemplate());
     initMount(document.getElementById('faq-accordion'), faqTemplate());
     initMount(document.getElementById('portfolio-featured-grid'), portfolioFeaturedTemplate());
